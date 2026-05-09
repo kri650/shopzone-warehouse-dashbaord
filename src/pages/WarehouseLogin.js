@@ -15,6 +15,13 @@ const WarehouseLogin = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const handleAutofill = () => {
+    setFormData({
+      email: 'staff@shopzone.local',
+      password: 'Staff@12345'
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
@@ -48,6 +55,43 @@ const WarehouseLogin = () => {
             <Link to="/forgot-password">Forgot password?</Link>
           </div>
         </form>
+
+        <div className="demo-credentials" style={{
+          marginTop: '20px',
+          padding: '12px',
+          backgroundColor: 'rgba(59, 130, 246, 0.08)',
+          border: '1px dashed #3b82f6',
+          borderRadius: '8px',
+          fontSize: '0.875rem',
+          textAlign: 'left'
+        }}>
+          <div style={{ fontWeight: '600', color: '#1e3a8a', marginBottom: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span>🔑 Demo Warehouse Credentials</span>
+            <button 
+              type="button" 
+              onClick={handleAutofill}
+              style={{
+                background: '#3b82f6',
+                color: 'white',
+                border: 'none',
+                padding: '4px 8px',
+                borderRadius: '4px',
+                fontSize: '0.75rem',
+                cursor: 'pointer',
+                fontWeight: '500',
+                transition: 'background 0.2s'
+              }}
+              onMouseOver={(e) => e.target.style.background = '#2563eb'}
+              onMouseOut={(e) => e.target.style.background = '#3b82f6'}
+            >
+              Autofill
+            </button>
+          </div>
+          <div style={{ color: '#1e40af', fontFamily: 'monospace', fontSize: '0.8rem' }}>
+            Email: staff@shopzone.local<br/>
+            Password: Staff@12345
+          </div>
+        </div>
       </div>
     </div>
   );
