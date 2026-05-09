@@ -1,0 +1,92 @@
+.warehouse-dashboard {
+  padding: 20px;
+  background: var(--dash-bg);
+  min-height: 100vh;
+}
+
+.dashboard-header h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--dash-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.stat-card h3 {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.dashboard-section h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  font-size: 13px;
+}
+
+.data-table th {
+  background: #f7f8f8;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.status.delivered {
+  background: #e3f9e5;
+  color: var(--green);
+}
+
+.status.in_transit {
+  background: #e7f5ff;
+  color: #0066c0;
+}
+
+.status.packed {
+  background: #fff3e0;
+  color: #ff9900;
+}
+
+.status.pending {
+  background: #f5f5f5;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
