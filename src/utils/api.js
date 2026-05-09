@@ -3,7 +3,7 @@ import axios from 'axios';
 const TOKEN_KEY = 'shopzone_warehouse_token';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:5000/api',
+  baseURL: process.env.REACT_APP_API_URL || 'https://backend-93wt.onrender.com/api',
   timeout: 15000,
 });
 
